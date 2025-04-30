@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>粗線條示範（純CSS波浪刪除線）</title>
+<style>
+  body {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Microsoft JhengHei", sans-serif;
+    line-height: 2;
+    padding: 20px;
+  }
+  /* 1. 紅色底線 */
+  .red-underline {
+    text-decoration-line: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 6px; /* 加粗 */
+    text-underline-offset: 6px;
+  }
+  /* 2. 綠色波浪底線 */
+  .green-wavy-underline {
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: green;
+    text-decoration-thickness: 6px; /* 加粗 */
+    text-underline-offset: 6px;
+  }
+  /* 3. 淺橘色雙刪除線 */
+  .orange-double-line-through {
+    text-decoration-line: line-through;
+    text-decoration-style: double;
+    text-decoration-color: #f4a261; /* 淺橘色 */
+    text-decoration-thickness: 6px; /* 加粗 */
+  }
+  /* 4. 紫色波浪刪除線，純 CSS 實現 */
+  .purple-wavy-line-through {
+    font-weight: bold;
+    color: black;
+    text-decoration-line: line-through;
+    text-decoration-style: wavy;
+    text-decoration-color: purple;
+    text-decoration-thickness: 6px; /* 加粗 */
+    /* 微調刪除線位置，讓波浪線更貼近文字中間 */
+    text-underline-offset: 0.15em;
+    display: inline;
+  }
+</style>
+</head>
+<body>
+  <div class="red-underline">今天心情真好!!</div>
+  <div class="green-wavy-underline">今天心情真好!!</div>
+  <div class="orange-double-line-through">今天心情真好!!</div>
+  <div class="purple-wavy-line-through">今天心情真好!!</div>
+</body>
+</html>

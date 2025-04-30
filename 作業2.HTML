@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>指定作業</title>
+<style>
+  /* 整體字型 */
+  body {
+    font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+    margin: 20px;
+    background: linear-gradient(270deg, #ff6ec4, #7873f5, #4ade80, #facc15, #f97316);
+    background-size: 1000% 1000%;
+    animation: gradientBG 20s ease infinite;
+    color: #222;
+  }
+
+  @keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+
+  /* 標題區 */
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  header h1 {
+    font-family: "標楷體", serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+    margin-bottom: 8px;
+  }
+  header .slogan {
+    font-style: italic;
+    font-size: 1.4rem;
+    color: #eee;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  }
+
+  /* 主體區塊左右分割 */
+  .container {
+    display: flex;
+    gap: 25px;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+
+  /* 左邊照片區 */
+  .left {
+    flex: 1;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(255, 75, 43, 0.6);
+    font-weight: 700;
+    color: #fff;
+    transition: transform 0.3s ease;
+  }
+  .left:hover {
+    transform: scale(1.05);
+  }
+  .left img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 4px solid #fff;
+    box-shadow: 0 0 15px rgba(255,255,255,0.8);
+  }
+
+  /* 右邊內容區 */
+  .right {
+    flex: 2;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 114, 255, 0.6);
+    font-weight: 700;
+    transition: transform 0.3s ease;
+  }
+  .right:hover {
+    transform: scale(1.03);
+  }
+
+  /* 右邊兩欄 */
+  .right > div {
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  /* 右邊欄位標題 */
+  .right h3 {
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-top: 0;
+    padding: 8px 15px;
+    font-weight: 900;
+    border-radius: 8px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  }
+
+  /* 右邊段落文字 */
+  .right p, .right li {
+    line-height: 1.7;
+    white-space: pre-line; /* 保持換行 */
+    font-weight: 600;
+    text-shadow: 0 0 3px rgba(0,0,0,0.2);
+  }
+  .right ol {
+    padding-left: 20px;
+  }
+
+  /* 背景音樂控制樣式 */
+  audio {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    outline: none;
+    opacity: 0.75;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  audio:hover {
+    opacity: 1;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>網站標題</h1>
+  <div class="slogan">影響我最深的一句話</div>
+</header>
+
+<div class="container">
+  <div class="left">
+    <img src="我.JPG" alt="個人照片" />
+  </div>
+  <div class="right">
+    <div>
+      <h3>那些能帶給我快樂的事情</h3>
+      <p>在生活的旅途中，一些簡短而有力的勵志短句能夠成為我們前行的動力，這些短句不僅僅是文字，更是一種能量，能夠激發我們內心的潛能，增強自信，帶來積極的心理暗示。</p>
+
+      <h3>我最喜歡的清新文字</h3>
+      <ol>
+        <li>人生就像爬山，要保持平衡，就必須一直向前。</li>
+        <li>我們應該有毅力，尤其要有信心。</li>
+        <li>行動是成功的基礎，沒有行動，一切都是空談。</li>
+      </ol>
+
+      <h3>我最喜歡的一首歌—SAD</h3>
+      <p>
+Who am I? Someone that's afraid to let go, uh<br />
+You decide if you're ever gonna let me know (yeah)<br />
+Suicide if you ever try to let go, uh<br />
+I'm sad, I know, yeah, I'm sad, I know, yeah<br />
+I gave her everything, she took my heart and left me lonely<br />
+I think broken heart's contagious<br />
+I won't fix, I'd rather weep<br />
+I'm lost then I'm found, but it's torture bein' in love<br />
+I love when you're around, but I fuckin' hate when you leave<br />
+Who am I? Someone that's afraid to let go, uh<br />
+You decide if you're ever gonna let me know (yeah)<br />
+Suicide if you ever try to let go, uh<br />
+I'm sad, I know, yeah, I'm sad, I know, yeah<br />
+Who am I? Someone that's afraid to let go, uh<br />
+You decide if you're ever gonna let me know (yeah)<br />
+Suicide if you ever try to let go, uh<br />
+I'm sad, I know, yeah, I'm sad, I know, yeah<br />
+Who am I? Someone that's afraid to let go, uh<br />
+You decide if you're ever gonna let me know (yeah)<br />
+Suicide if you ever try to let go, uh<br />
+I'm sad, I know, yeah, I'm sad, I know, yeah<br />
+Who am I? Someone that's afraid to let go, uh<br />
+You decide if you're ever gonna let me know (yeah)<br />
+Suicide if you ever try to let go, uh<br />
+I'm sad, I know, yeah, I'm sad, I know, yeah
+      </p>
+    </div>
+
+    <div>
+      <p>我的心一直溫習說服自己<br />
+最怕你忽然說要放棄<br />
+愛真的需要勇氣來面對流言蜚語<br />
+只要你一個眼神肯定 我的愛就有意義<br />
+我們都需要勇氣去相信會在一起<br />
+人潮擁擠 我能願意你放在我手心裡 你的真心<br />
+終於做了這個決定<br />
+別人怎麼說 我不理<br />
+只要你也一樣的肯定<br />
+我願意天涯海角都隨你去<br />
+我知道一切不容易<br />
+我的心一直溫習說服自己<br />
+最怕你忽然說要放棄<br />
+愛真的需要勇氣來面對流言蜚語<br />
+只要你一個眼神肯定 我的愛就有意義</p>
+    </div>
+  </div>
+</div>
+
+<!-- 背景音樂 -->
+<audio controls autoplay loop>
+  <source src="XXXTENTACION - SAD!.mp3" type="audio/mpeg" />
+  您的瀏覽器不支援音訊元素。
+</audio>
+
+</body>
+</html>
